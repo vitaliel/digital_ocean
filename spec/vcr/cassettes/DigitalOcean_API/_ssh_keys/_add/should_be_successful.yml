@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.digitalocean.com/ssh_keys.json?client_id=client_id_XXXXXXXXXXXXXXXXXXX&api_key=api_key_YYYYYYYYYYYYYYYYYYYYY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Wed, 23 Jan 2013 20:20:06 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - '200'
+      x-powered-by:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.11
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      etag:
+      - XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      cache-control:
+      - max-age=0, private, must-revalidate
+      set-cookie:
+      - _digitalocean2_session=wtf
+      x-request-id:
+      - 4c6c620cf4b58304db623f7c0b13fc44
+      x-runtime:
+      - '0.664323'
+      x-rack-cache:
+      - miss
+    body:
+      encoding: US-ASCII
+      string: ! '{"status":"OK","ssh_keys":[{"id":3738,"name":"default"},{"id":3928,"name":"xxx"}]}'
+    http_version: 
+  recorded_at: Wed, 23 Jan 2013 20:20:06 GMT
+recorded_with: VCR 2.4.0

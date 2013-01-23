@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.digitalocean.com/ssh_keys/3738?client_id=client_id_XXXXXXXXXXXXXXXXXXX&api_key=api_key_YYYYYYYYYYYYYYYYYYYYY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Wed, 23 Jan 2013 20:12:11 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - '200'
+      x-powered-by:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.11
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      etag:
+      - XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      cache-control:
+      - max-age=0, private, must-revalidate
+      set-cookie:
+      - _digitalocean2_session=wtf
+      x-request-id:
+      - 32e594483d2d06fe2dfad351f3010df0
+      x-runtime:
+      - '0.612660'
+      x-rack-cache:
+      - miss
+    body:
+      encoding: US-ASCII
+      string: ! '{"status":"OK","ssh_key":{"id":3738,"name":"default","ssh_pub_key":"ssh-dss
+        AAAAB3NzaC1kc3MAAACBAPThLrORruKPqm9B9WQ3Sc215mytV0R0tmGX3LowdFwLrsuhshgBQc0jQzXMrr4V+INn51ICHnNVQAgNdpglexvkevyGIw2uWqeKhHOFwKX4/vrFeCtb+MNFiI4bTuAZ2WPOrUqm9gXal3VysanjK3DQ9HxNQUjHOcPVMXrm2OzvAAAAFQCHMswAbrQ/stlOaAjz0tyxHGEHywAAAIEA0SmM7J6nZhhvY2HTviFDBsyq1acRAQ0t3ZOY030Z4XE56JvMGgkIl1ioejVNObWyNs5omSO+zpntBrvVdl2+dKe8OxUH5YS54rNA1hkJmcoPla3P/oVqvRsVoFdWjOv/KeWFoBdC/x/KGdVsI0/vJF6jpnrjkOKcGR0ih4ss29wAAACBALZxAEu9qlgTaGNPc0J041UMmbROlgayVZ0HlhqQn7jd1jjqmtJeNlG86axtbza2F3VwOhXmegTLLMHowlOoLLLzB3cCgYLT0N98uov3+1nAudnTmUVujBHNwa/oAH+1pE94ob/BPgef2mp59LRgMaes1/u8yOCURcrWU4oPsEO5
+        rmoriz@moriz\r\n"}}'
+    http_version: 
+  recorded_at: Wed, 23 Jan 2013 20:12:11 GMT
+recorded_with: VCR 2.4.0

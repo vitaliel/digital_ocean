@@ -112,7 +112,7 @@ describe DigitalOcean::API, :vcr do
       context 'invalid' do
         let(:id) { 1 }
 
-        it 'should be successful' do
+        it 'should not be successful' do
           response.status.should eql('ERROR')
         end
       end

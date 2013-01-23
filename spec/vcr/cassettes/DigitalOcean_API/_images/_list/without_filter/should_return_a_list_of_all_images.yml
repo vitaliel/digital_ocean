@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.digitalocean.com/images?client_id=client_id_XXXXXXXXXXXXXXXXXXX&api_key=api_key_YYYYYYYYYYYYYYYYYYYYY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Wed, 23 Jan 2013 21:04:42 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - '200'
+      x-powered-by:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.11
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      etag:
+      - XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      cache-control:
+      - max-age=0, private, must-revalidate
+      set-cookie:
+      - _digitalocean2_session=wtf
+      x-request-id:
+      - f6a0ae5392f0888e99809aa14dc63c18
+      x-runtime:
+      - '0.190669'
+      x-rack-cache:
+      - miss
+    body:
+      encoding: US-ASCII
+      string: ! '{"status":"OK","images":[{"id":57002,"name":"init","distribution":"Ubuntu"},{"id":57089,"name":"test1","distribution":"Ubuntu"},{"id":1601,"name":"CentOS
+        5.8 x64","distribution":"CentOS"},{"id":1602,"name":"CentOS 5.8 x32","distribution":"CentOS"},{"id":1605,"name":"CentOS
+        6.0 x32","distribution":"CentOS"},{"id":1606,"name":"Fedora 15 x64","distribution":"Fedora"},{"id":1607,"name":"Gentoo
+        x64","distribution":"Gentoo"},{"id":1609,"name":"Ubuntu 11.10 x32 Server","distribution":"Ubuntu"},{"id":1611,"name":"CentOS
+        6.2 x64","distribution":"CentOS"},{"id":1615,"name":"Fedora 16 x64 Server","distribution":"Fedora"},{"id":1618,"name":"Fedora
+        16 x64 Desktop","distribution":"Fedora"},{"id":2676,"name":"Ubuntu 12.04 x64
+        Server","distribution":"Ubuntu"},{"id":4870,"name":"Rails 3.2.2 - Nginx MySQL
+        Passenger","distribution":"Ubuntu"},{"id":12573,"name":"Debian 6.0 x64","distribution":"Debian"},{"id":12574,"name":"CentOS
+        6.3 x64","distribution":"CentOS"},{"id":12575,"name":"Debian 6.0 x32","distribution":"Debian"},{"id":12578,"name":"CentOS
+        6.3 x32","distribution":"CentOS"},{"id":13632,"name":"Open Suse 12.1 x32","distribution":"openSUSE"},{"id":13863,"name":"Open
+        Suse 12.2 X64","distribution":"openSUSE"},{"id":14097,"name":"Ubuntu 10.04
+        x64 Server","distribution":"Ubuntu"},{"id":14098,"name":"Ubuntu 10.04 x32
+        Server","distribution":"Ubuntu"},{"id":14218,"name":"Ubuntu 12.04 x64 Desktop","distribution":"Ubuntu"},{"id":23593,"name":"Arch
+        Linux 2012-09 x64","distribution":"Arch Linux"},{"id":25306,"name":"Ubuntu
+        12.10 x32 Server","distribution":"Ubuntu"},{"id":25485,"name":"Ubuntu 12.10
+        x32 Desktop","distribution":"Ubuntu"},{"id":25489,"name":"Ubuntu 12.10 x64
+        Server","distribution":"Ubuntu"},{"id":25493,"name":"Ubuntu 12.10 x64 Desktop","distribution":"Ubuntu"},{"id":32387,"name":"Fedora
+        17 x32 Server","distribution":"Fedora"},{"id":32399,"name":"Fedora 17 x32
+        Desktop","distribution":"Fedora"},{"id":32419,"name":"Fedora 17 x64 Desktop","distribution":"Fedora"},{"id":32428,"name":"Fedora
+        17 x64 Server","distribution":"Fedora"},{"id":42735,"name":"Ubuntu 12.04 x32
+        Server","distribution":"Ubuntu"},{"id":43458,"name":"Ubuntu 11.04x64 Server","distribution":"Ubuntu"},{"id":43462,"name":"Ubuntu
+        11.04x32 Desktop","distribution":"Ubuntu"},{"id":46964,"name":"LAMP on Ubuntu
+        12.04","distribution":"Ubuntu"}]}'
+    http_version: 
+  recorded_at: Wed, 23 Jan 2013 21:04:42 GMT
+recorded_with: VCR 2.4.0
