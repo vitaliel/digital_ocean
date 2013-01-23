@@ -2,6 +2,9 @@
 
 TODO: Write a gem description
 
+[![Build Status](https://travis-ci.org/rmoriz/digital_ocean.png)](https://travis-ci.org/rmoriz/digital_ocean)
+
+
 ## Installation
 
 Add this line to your application's Gemfile:
