@@ -1,8 +1,6 @@
 module DigitalOcean
   module Resource
     class Base
-      attr_accessor :query
-
       def initialize(connection, options = {})
         @connection = connection
       end

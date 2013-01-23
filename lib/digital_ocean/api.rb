@@ -16,6 +16,18 @@ module DigitalOcean
       DigitalOcean::Resource::Droplet.new(@faraday)
     end
 
+    def sizes
+      DigitalOcean::Resource::Size.new(@faraday)
+    end
+
+    def regions
+      DigitalOcean::Resource::Region.new(@faraday)
+    end
+
+    def ssh_keys
+      DigitalOcean::Resource::SSHKey.new(@faraday)
+    end
+
     def default_faraday
       Faraday.new(:url => @base_url) do |faraday|
         faraday.use AuthenticationMiddleware, @client_id, @api_key

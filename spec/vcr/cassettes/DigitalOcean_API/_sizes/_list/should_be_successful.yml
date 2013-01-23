@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.digitalocean.com/sizes?client_id=client_id_XXXXXXXXXXXXXXXXXXX&api_key=api_key_YYYYYYYYYYYYYYYYYYYYY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Wed, 23 Jan 2013 14:00:02 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - '200'
+      x-powered-by:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.11
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      etag:
+      - XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      cache-control:
+      - max-age=0, private, must-revalidate
+      set-cookie:
+      - _digitalocean2_session=wtf
+      x-request-id:
+      - ffe527ff682a7319399ba74c7b4e98aa
+      x-runtime:
+      - '0.667186'
+      x-rack-cache:
+      - miss
+    body:
+      encoding: US-ASCII
+      string: ! '{"status":"OK","sizes":[{"id":66,"name":"512MB"},{"id":63,"name":"1GB"},{"id":62,"name":"2GB"},{"id":64,"name":"4GB"},{"id":65,"name":"8GB"},{"id":61,"name":"16GB"},{"id":60,"name":"32GB"},{"id":70,"name":"48GB"},{"id":69,"name":"64GB"},{"id":68,"name":"96GB"}]}'
+    http_version: 
+  recorded_at: Wed, 23 Jan 2013 14:00:02 GMT
+recorded_with: VCR 2.4.0

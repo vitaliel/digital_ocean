@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.digitalocean.com/regions?client_id=client_id_XXXXXXXXXXXXXXXXXXX&api_key=api_key_YYYYYYYYYYYYYYYYYYYYY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Wed, 23 Jan 2013 14:05:59 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - '200'
+      x-powered-by:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.11
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      etag:
+      - XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      cache-control:
+      - max-age=0, private, must-revalidate
+      set-cookie:
+      - _digitalocean2_session=wtf
+      x-request-id:
+      - bd3acf9563ecea95e21b906d737425cc
+      x-runtime:
+      - '0.974501'
+      x-rack-cache:
+      - miss
+    body:
+      encoding: US-ASCII
+      string: ! '{"status":"OK","regions":[{"id":1,"name":"New York 1"},{"id":2,"name":"Amsterdam
+        1"}]}'
+    http_version: 
+  recorded_at: Wed, 23 Jan 2013 14:05:59 GMT
+recorded_with: VCR 2.4.0
