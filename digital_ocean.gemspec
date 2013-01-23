@@ -17,9 +17,22 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
+  if RUBY_PLATFORM == 'java'
+    gem.add_runtime_dependency 'jruby-openssl'
+  end
+
+  gem.add_dependency 'faraday', '~> 0.8.4'
+  gem.add_dependency 'faraday_middleware'
+  gem.add_dependency 'json'
+  gem.add_dependency 'rash'
+
   gem.add_development_dependency 'rspec', '~> 2.0'
-  gem.add_development_dependency 'rake'
   gem.add_development_dependency 'guard'
   gem.add_development_dependency 'guard-rspec'
   gem.add_development_dependency 'rb-fsevent'
+
+  gem.add_development_dependency 'vcr',     '~> 2.4'
+  gem.add_development_dependency 'fakeweb', '~> 1.3.0'
+  gem.add_development_dependency 'rake'
+  gem.add_development_dependency 'yard'
 end
