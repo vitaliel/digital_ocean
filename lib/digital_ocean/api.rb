@@ -28,6 +28,10 @@ module DigitalOcean
       DigitalOcean::Resource::SSHKey.new(@faraday)
     end
 
+    def images
+      DigitalOcean::Resource::Image.new(@faraday)
+    end
+
     def default_faraday
       Faraday.new(:url => @base_url) do |faraday|
         faraday.use AuthenticationMiddleware, @client_id, @api_key

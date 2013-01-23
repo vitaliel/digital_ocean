@@ -91,5 +91,159 @@ describe DigitalOcean::API, :vcr do
         response.ssh_keys.should have_at_least(1).item
       end
     end
+
+    describe '#show' do
+      let(:response) {
+        subject.ssh_keys.show id
+      }
+
+      context 'valid' do
+        let(:id) { 3738 }
+
+        it 'should be successful' do
+          response.status.should eql('OK')
+        end
+
+        it 'should return the public keykey' do
+          response.ssh_key.ssh_pub_key.should_not be_empty
+        end
+      end
+
+      context 'invalid' do
+        let(:id) { 1 }
+
+        it 'should be successful' do
+          response.status.should eql('ERROR')
+        end
+      end
+    end
+
+    describe '#add' do
+      pending
+
+      let(:response) {
+        subject.ssh_keys.add :name => name, :ssh_key_pub => ssh_key_pub
+      }
+      let(:name) { 'mobile computer' }
+      let(:ssh_key_pub) {'xxx' }
+
+      xit 'should be successful' do
+        puts response.status
+        response.status.should eql('OK')
+      end
+    end
+
+    describe '#edit' do
+      pending
+    end
+
+    describe '#delete' do
+      let(:id) { 3928 }
+
+      let(:response) {
+        subject.ssh_keys.delete id
+      }
+
+      it 'should be successful' do
+        response.status.should eql('OK')
+      end
+    end
+  end
+
+  describe '#images' do
+    describe '#list' do
+      context 'without filter' do
+        let(:response) {
+          subject.images.list
+        }
+
+        it 'should be successful' do
+          response.status.should eql('OK')
+        end
+
+        it 'should return a list of all images' do
+          response.images.should have_at_least(1).item
+        end
+      end
+
+      context 'with filter: global' do
+        let(:response) {
+          subject.images.list :filter => 'global'
+        }
+
+        it 'should be successful' do
+          response.status.should eql('OK')
+        end
+
+        it 'should return global images' do
+          response.images.should have_at_least(1).item
+        end
+      end
+
+      context 'with filter: my_images' do
+        let(:response) {
+          subject.images.list :filter => 'my_images'
+        }
+
+        it 'should be successful' do
+          response.status.should eql('OK')
+        end
+
+        it 'should return my_images' do
+          response.images.should have_at_least(1).item
+        end
+      end
+    end
+
+    describe '#show' do
+      let(:response) {
+        subject.images.show id
+      }
+
+      context 'valid' do
+        let(:id) { 1601 } # CentOS 5.8 x64
+
+        it 'should be successful' do
+          response.status.should eql('OK')
+        end
+
+        it 'should return the image' do
+          response.image.name.should_not be_empty
+          response.image.distribution.should eql('CentOS')
+        end
+      end
+
+      context 'invalid' do
+        let(:id) { 0 }
+
+        it 'should not be successful' do
+          response.status.should eql('ERROR')
+        end
+      end
+    end
+
+    describe '#delete' do
+      let(:response) {
+        subject.images.delete id
+      }
+
+      context 'valid' do
+        let(:id) { 57089 }
+
+        it 'should be successful' do
+          pending
+          response.status.should eql('OK')
+        end
+      end
+
+      context 'invalid' do
+        let(:id) { 0 }
+
+        it 'should not be successful' do
+          response.status.should eql('ERROR')
+        end
+      end
+    end
+
   end
 end
