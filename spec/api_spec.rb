@@ -13,6 +13,7 @@ describe DigitalOcean::API, :vcr do
   end
 
   describe '#droplets' do
+    let(:droplet_id) { 87071 }
 
     describe '#list' do
       let(:response) {
@@ -28,16 +29,188 @@ describe DigitalOcean::API, :vcr do
       end
     end
 
-    # describe '#show' do
-    #   let(:id) { 83102 }
-    #   let(:response) {
-    #     subject.droplets.show id
-    #   }
+    describe '#show' do
+      let(:id) { 83102 }
+      let(:response) {
+        subject.droplets.show id
+      }
 
-    #   it 'should be successful' do
-    #     response.status.should eql('OK')
-    #   end
-    # end
+      it 'should be successful' do
+        response.status.should eql('OK')
+      end
+    end
+
+    describe '#create' do
+      let(:name)        { 't1'  } # "Only valid hostname characters are allowed. (a-z, A-Z, 0-9, . and -)"
+      let(:size_id)     { 66    } # 512MB
+      let(:image_id)    { 25306 } # Ubuntu 12.10 x32 Server
+      let(:region_id)   { 2     } # Amsterdam/NL
+      let(:ssh_key_ids) { [] }
+
+      let(:response) {
+        subject.droplets.create :name        => name,
+                                :size_id     => size_id,
+                                :image_id    => image_id,
+                                :region_id   => region_id,
+                                :ssh_key_ids => ssh_key_ids
+      }
+
+      it 'should be successful' do
+        # #<Hashie::Rash droplet=#<Hashie::Rash event_id=123456 id=87071 image_id=25306 name="t1" size_id=66> status="OK">
+        response.status.should eql('OK')
+      end
+    end
+
+    describe '#reboot' do
+      let(:response) {
+        subject.droplets.reboot droplet_id
+      }
+
+      it 'should be successful' do
+        #<Hashie::Rash event_id=123456 status="OK">
+        response.status.should eql('OK')
+      end
+    end
+
+    describe '#power_cycle' do
+      let(:response) {
+        subject.droplets.power_cycle droplet_id
+      }
+
+      it 'should be successful' do
+        #<Hashie::Rash event_id=123456 status="OK">
+        response.status.should eql('OK')
+      end
+    end
+
+    describe '#shutdown' do
+      let(:response) {
+        subject.droplets.shutdown droplet_id
+      }
+
+      it 'should be successful' do
+        #<Hashie::Rash event_id=123456 status="OK">
+        response.status.should eql('OK')
+      end
+    end
+
+    describe '#power_on' do
+      let(:response) {
+        subject.droplets.power_on droplet_id
+      }
+
+      it 'should be successful' do
+        #<Hashie::Rash event_id=123456 status="OK">
+        response.status.should eql('OK')
+      end
+    end
+
+    describe '#power_off' do
+      let(:response) {
+        subject.droplets.power_off droplet_id
+      }
+
+      it 'should be successful' do
+        #<Hashie::Rash event_id=123456 status="OK">
+        response.status.should eql('OK')
+      end
+    end
+
+    describe '#reset_root_password' do
+      let(:response) {
+        subject.droplets.reset_root_password droplet_id
+      }
+
+      it 'should be successful' do
+        pending "does not work, ask digitalocean to fix"
+        #<Hashie::Rash event_id=123456 status="OK">
+        response.status.should eql('OK')
+      end
+    end
+
+    describe '#resize' do
+      let(:new_size_id) { 63 }  # 1GB RAM
+
+      let(:response) {
+        subject.droplets.resize droplet_id, :size_id => new_size_id
+      }
+
+      it 'should be successful' do
+        # Note: you need to do a full powercycle after this!
+        #<Hashie::Rash event_id=123456 status="OK">
+        response.status.should eql('OK')
+      end
+    end
+
+    describe '#snapshot' do
+      let(:snapshot_name) { 'test_snapshot_1' }
+      let(:response) {
+        subject.droplets.snapshot droplet_id, :name => snapshot_name
+      }
+
+      it 'should be successful' do
+        #<Hashie::Rash event_id=123456 status="OK">
+        response.status.should eql('OK')
+      end
+    end
+
+    describe '#restore' do
+      let(:image_id) { 57658 }
+      let(:response) {
+        subject.droplets.restore droplet_id, :image_id => image_id
+      }
+
+      it 'should be successful' do
+        #<Hashie::Rash event_id=123456 status="OK">
+        response.status.should eql('OK')
+      end
+    end
+
+    describe '#rebuild' do
+      let(:image_id) { 57658 }
+      let(:response) {
+        subject.droplets.rebuild droplet_id, :image_id => image_id
+      }
+
+      it 'should be successful' do
+        #<Hashie::Rash event_id=123456 status="OK">
+        response.status.should eql('OK')
+      end
+    end
+
+    describe '#enable_backups' do
+      let(:response) {
+        subject.droplets.enable_backups droplet_id
+      }
+
+      it 'should be successful' do
+        #<Hashie::Rash event_id=123456 status="OK">
+        response.status.should eql('OK')
+      end
+    end
+
+    describe '#disable_backups' do
+      let(:response) {
+        subject.droplets.disable_backups droplet_id
+      }
+
+      it 'should be successful' do
+        #<Hashie::Rash event_id=123456 status="OK">
+        response.status.should eql('OK')
+      end
+    end
+
+    describe '#delete' do
+      let(:response) {
+        subject.droplets.delete droplet_id
+      }
+
+      it 'should be successful' do
+        puts response.inspect
+        #<Hashie::Rash event_id=123456 status="OK">
+        response.status.should eql('OK')
+      end
+    end
   end
 
   describe '#sizes' do
@@ -119,7 +292,7 @@ describe DigitalOcean::API, :vcr do
     end
 
     describe '#add' do
-      pending
+      pending "does not work, ask digitalocean to fix"
 
       let(:response) {
         subject.ssh_keys.add :name => name, :ssh_key_pub => ssh_key_pub
@@ -134,7 +307,7 @@ describe DigitalOcean::API, :vcr do
     end
 
     describe '#edit' do
-      pending
+      pending "does not work, ask digitalocean to fix"
     end
 
     describe '#delete' do
@@ -229,9 +402,8 @@ describe DigitalOcean::API, :vcr do
 
       context 'valid' do
         let(:id) { 57089 }
-
         it 'should be successful' do
-          pending
+          pending "does not work, ask digitalocean to fix"
           response.status.should eql('OK')
         end
       end

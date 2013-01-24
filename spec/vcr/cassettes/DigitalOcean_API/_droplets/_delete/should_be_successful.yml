@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://api.digitalocean.com/droplets/87071/destroy?client_id=client_id_XXXXXXXXXXXXXXXXXXX&api_key=api_key_YYYYYYYYYYYYYYYYYYYYY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Thu, 24 Jan 2013 10:02:25 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - '200'
+      x-powered-by:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.11
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      etag:
+      - XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      cache-control:
+      - max-age=0, private, must-revalidate
+      set-cookie:
+      - _digitalocean2_session=wtf
+      x-request-id:
+      - 214430901aca3df5620ead3434e2df9e
+      x-runtime:
+      - '0.643373'
+      x-rack-cache:
+      - invalidate, pass
+    body:
+      encoding: US-ASCII
+      string: ! '{"status":"OK","event_id":594739}'
+    http_version: 
+  recorded_at: Thu, 24 Jan 2013 10:02:25 GMT
+recorded_with: VCR 2.4.0

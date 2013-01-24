@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.digitalocean.com/droplets/87071/enable_backups?client_id=client_id_XXXXXXXXXXXXXXXXXXX&api_key=api_key_YYYYYYYYYYYYYYYYYYYYY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Thu, 24 Jan 2013 09:56:25 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - '200'
+      x-powered-by:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.11
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      etag:
+      - XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      cache-control:
+      - max-age=0, private, must-revalidate
+      set-cookie:
+      - _digitalocean2_session=wtf
+      x-request-id:
+      - 2583dacb0be13efdaa97ea1ecc1dd36c
+      x-runtime:
+      - '0.504030'
+      x-rack-cache:
+      - invalidate, pass
+    body:
+      encoding: US-ASCII
+      string: ! '{"status":"OK","event_id":594709}'
+    http_version: 
+  recorded_at: Thu, 24 Jan 2013 09:56:25 GMT
+recorded_with: VCR 2.4.0
