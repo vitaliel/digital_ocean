@@ -1,8 +1,13 @@
 # DigitalOcean
-
-TODO: Write a gem description
-
 [![Build Status](https://travis-ci.org/rmoriz/digital_ocean.png)](https://travis-ci.org/rmoriz/digital_ocean)
+
+DigitalOcean provides simple cloud hosting. Create and delete
+SSD-based virtual machines within seconds for a very affordable price.
+
+Go to https://www.digitalocean.com/ for more information.
+
+This gem is a simple ruby wrapper for the HTTP API of DigitalOcean using
+the great [Faraday](https://github.com/lostisland/faraday) library.
 
 
 ## Installation
@@ -19,9 +24,22 @@ Or install it yourself as:
 
     $ gem install digital_ocean
 
+## Prerequisite: Create an account and API credentials
+
+TODO
+
 ## Usage
 
-TODO: Write usage instructions here
+### Create a client instance
+
+```ruby
+require 'digital_ocean'
+
+dc = DigitalOcean::API.new :client_id => 'YOUR_CLIENT_ID', 
+                           :api_key   => 'YOUR_API_KEY'
+```
+
+
 
 ## Contributing
 
@@ -32,7 +50,10 @@ TODO: Write usage instructions here
 5. Create new Pull Request
 
 ## License
+
 MIT
 
 ## Copyright
+
 2013 Moriz GmbH, https://moriz.de/
+
