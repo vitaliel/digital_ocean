@@ -40,13 +40,11 @@ require 'digital_ocean'
 dc = DigitalOcean::API.new :client_id => 'YOUR_CLIENT_ID', 
                            :api_key   => 'YOUR_API_KEY'
 
- 
 # 2. get all regions (server locations)
 #
 res = dc.regions.list
 res.regions.size # => 2
 res.regions.first.name # => "New York 1"
-
 
 # 3. get all available machine types (sizes)
 #
