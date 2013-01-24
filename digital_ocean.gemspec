@@ -4,18 +4,18 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'digital_ocean/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "digital_ocean"
+  gem.name          = 'digital_ocean'
   gem.version       = DigitalOcean::VERSION
-  gem.authors       = ["Roland Moriz"]
-  gem.email         = ["roland@moriz.de"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.authors       = ['Roland Moriz']
+  gem.email         = ['roland@moriz.de']
+  gem.description   = %q{A Ruby gem to interact with DigitalOcean, a cloud hosting provider}
+  gem.summary       = %q{This gem wraps the DigitalOcean API documented at https://api.digitalocean.com/}
+  gem.homepage      = 'https://github.com/rmoriz/digital_ocean'
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-  gem.require_paths = ["lib"]
+  gem.require_paths = ['lib']
 
   if RUBY_PLATFORM == 'java'
     gem.add_runtime_dependency 'jruby-openssl'
