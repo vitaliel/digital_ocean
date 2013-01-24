@@ -84,7 +84,10 @@ res = dc.droplets.create :name      => 'new_hostname',
 #
 res = dc.droplets.list
 res.droplets
-# => [#<Hashie::Rash backups_active=false id=123456 image_id=25306 ip_address="123.123.123.123" name="new_hostname" region_id=1 size_id=64 status="active">]
+# => [#<Hashie::Rash backups_active=false id=123456 
+#                    image_id=25306 ip_address="123.123.123.123" 
+#                    name="new_hostname" region_id=1 size_id=64 
+#                    status="active">]
 
 ```
 
