@@ -6,7 +6,7 @@ SSD-based virtual machines within seconds for a very affordable price.
 
 Go to https://www.digitalocean.com/ for more information.
 
-This gem is a simple ruby wrapper for the HTTP API of DigitalOcean using
+This gem is a simple ruby wrapper for the [HTTP API of DigitalOcean](https://api.digitalocean.com/) using
 the great [Faraday](https://github.com/lostisland/faraday) library.
 
 
