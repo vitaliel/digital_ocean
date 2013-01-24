@@ -11,6 +11,7 @@ Gem::Specification.new do |gem|
   gem.description   = %q{A Ruby gem to interact with DigitalOcean, a cloud hosting provider}
   gem.summary       = %q{This gem wraps the DigitalOcean API documented at https://api.digitalocean.com/}
   gem.homepage      = 'https://github.com/rmoriz/digital_ocean'
+  gem.license       = 'MIT'
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
