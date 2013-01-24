@@ -30,7 +30,7 @@ TODO
 
 ## Usage
 
-### ExampleS
+### Examples
 
 ```ruby
 require 'digital_ocean'
