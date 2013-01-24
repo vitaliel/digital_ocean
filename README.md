@@ -75,10 +75,10 @@ res.images
 
 # 5. start a new instance (called droplet)
 # 
-res = dc.droplets.create :name => "new_hostname",
-                         :size_id     => 64,
-                         :image_id    => 2676,
-                         :region_id   => 1
+res = dc.droplets.create :name      => 'new_hostname',
+                         :size_id   => 64,
+                         :image_id  => 2676,
+                         :region_id => 1
 
 # 6. query droplet status (e.g. to get the IP of a droplet)
 #
