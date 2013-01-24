@@ -77,20 +77,16 @@ res.images
 
 # 5. start a new instance (called droplet)
 # 
-
 res = dc.droplets.create :name => "new_hostname",
                          :size_id     => 64,
                          :image_id    => 2676,
                          :region_id   => 1
 
-
 # 6. query droplet status (e.g. to get the IP of a droplet)
-
+#
 res = dc.droplets.list
 res.droplets
 # => [#<Hashie::Rash backups_active=false id=123456 image_id=25306 ip_address="123.123.123.123" name="new_hostname" region_id=1 size_id=64 status="active">]
-
-
 
 ```
 
