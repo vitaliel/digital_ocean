@@ -94,6 +94,97 @@ res.droplets
 see ```spec/api_spec.rb``` for more details and all implemented
 resources.
 
+## Features
+
+### DigitalOcean::API
+  - .new
+    - should return an instance when called with the essential parameters
+  - \#droplets
+    - \#list
+      - should be successful
+      - should return a list of all droplets
+    - \#show
+      - should be successful
+    - \#create
+      - should be successful
+    - \#reboot
+      - should be successful
+    - \#power\_cycle
+      - should be successful
+    - \#shutdown
+      - should be successful
+    - \#power\_on
+      - should be successful
+    - \#power\_off
+      - should be successful
+    - \#reset\_root\_password
+      - should be successful (PENDING: does not work, ask digitalocean to fix)
+    - \#resize
+      - should be successful
+    - \#snapshot
+      - should be successful
+    - \#restore
+      - should be successful
+    - \#rebuild
+      - should be successful
+    - \#enable\_backups
+      - should be successful
+    - \#disable\_backups
+      - should be successful
+    - \#delete
+#<Hashie::Rash event_id=594739 status="OK">
+      - should be successful
+  - \#sizes
+    - \#list
+      - should be successful
+      - should return a list of all droplet sizes
+      - should return the correct ID for the 96GB size
+  - \#regions
+    - \#list
+      - should be successful
+      - should return a list of all regions
+  - \#ssh\_keys
+    - \#list
+      - should be successful
+      - should return a list of all SSH keys
+    - \#show
+      - valid
+        - should be successful
+        - should return the public keykey
+      - invalid
+        - should not be successful
+    - \#add
+      - does not work, ask digitalocean to fix (PENDING: No reason given)
+      - should be successful (PENDING: Temporarily disabled with xit)
+    - \#edit
+      - does not work, ask digitalocean to fix (PENDING: No reason given)
+    - \#delete
+      - should be successful
+  - \#images
+    - \#list
+      - without filter
+        - should be successful
+        - should return a list of all images
+      - with filter: global
+        - should be successful
+        - should return global images
+      - with filter: my\_images
+        - should be successful
+        - should return my\_images
+    - \#show
+      - valid
+        - should be successful
+        - should return the image
+      - invalid
+        - should not be successful
+    - \#delete
+      - valid
+        - should be successful (PENDING: does not work, ask digitalocean to fix)
+      - invalid
+        - should not be successful
+
+### DigitalOcean
+  - should have a version number
 
 ## Contributing
 
