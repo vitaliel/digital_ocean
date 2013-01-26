@@ -1,4 +1,4 @@
-Copyright (c) 2013 Moriz GmbH
+Copyright (c) 2013 Moriz GmbH — https://moriz.de/
 
 MIT License
 
