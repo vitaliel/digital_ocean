@@ -17,6 +17,7 @@ Gem::Specification.new do |gem|
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ['lib']
+  gem.has_rdoc      = 'yard'
 
   if RUBY_PLATFORM == 'java'
     gem.add_runtime_dependency 'jruby-openssl'
