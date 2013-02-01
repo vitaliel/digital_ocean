@@ -59,6 +59,10 @@ describe DigitalOcean::API, :vcr do
         # #<Hashie::Rash droplet=#<Hashie::Rash event_id=123456 id=87071 image_id=25306 name="t1" size_id=66> status="OK">
         response.status.should eql('OK')
       end
+      
+      it 'should return droplet.id' do
+        response.droplet.id.should_not be_nil
+      end
     end
 
     describe '#reboot' do

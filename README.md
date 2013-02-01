@@ -107,6 +107,7 @@ resources.
       - should be successful
     - \#create
       - should be successful
+      - should return a droplet.id
     - \#reboot
       - should be successful
     - \#power\_cycle
