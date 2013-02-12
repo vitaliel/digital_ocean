@@ -200,6 +200,7 @@ resources.
 
 *   [willglynn](https://github.com/willglynn) 
 
+For more information and a complete list see [the contributor page on GitHub](https://github.com/rmoriz/digital_ocean/contributors).
 
 ## License
 
