@@ -9,6 +9,7 @@ Go to https://www.digitalocean.com/ for more information.
 This gem is a simple ruby wrapper for the [HTTP API of DigitalOcean](https://api.digitalocean.com/) using
 the great [Faraday](https://github.com/lostisland/faraday) library.
 
+__*If you use [Opscode Chef](http://www.opscode.com/) to deploy and manage servers, make sure to checkout my knife plugin for chef: [knife-digital_ocean](https://github.com/rmoriz/knife-digital_ocean)*__
 
 ## Installation
 
@@ -199,7 +200,13 @@ resources.
 
 MIT
 
+## Commercial Support
+
+Commercial support is available. Please contact [https://roland.io/](https://roland.io/) or [http://moriz.com/](http://moriz.com/)
+
 ## Copyright
 
-2013 Moriz GmbH, https://moriz.de/
+Copyright © 2013 [Roland Moriz](https://roland.io), [Moriz GmbH](https://moriz.de/)
+
+[![LinkedIn](http://www.linkedin.com/img/webpromo/btn_viewmy_160x25.png)](http://www.linkedin.com/in/rmoriz)
 
