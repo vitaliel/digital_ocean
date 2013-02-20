@@ -40,8 +40,8 @@ module DigitalOcean
         @connection.put("/droplets/#{id}/power_off").body
       end
 
-      def reset_root_password(id)
-        @connection.post("/droplets/#{id}/reset_root_password").body
+      def password_reset(id)
+        @connection.post("/droplets/#{id}/password_reset").body
       end
 
       def resize(id, params)
