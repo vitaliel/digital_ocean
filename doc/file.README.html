@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>
   File: README
   
@@ -63,7 +63,9 @@
 
     <div id="content"><div id='filecontents'><h1>DigitalOcean</h1>
 
-<p><a href="https://travis-ci.org/rmoriz/digital_ocean"><img src="https://travis-ci.org/rmoriz/digital_ocean.png" alt="Build Status"></a></p>
+<p><a href="https://travis-ci.org/rmoriz/digital_ocean"><img src="https://travis-ci.org/rmoriz/digital_ocean.png" alt="Build Status"></a>
+<a href="https://gemnasium.com/rmoriz/digital_ocean"><img src="https://gemnasium.com/rmoriz/digital_ocean.png" height="13" /></a>
+<a href="https://codeclimate.com/github/rmoriz/digital_ocean"><img src="https://codeclimate.com/github/rmoriz/digital_ocean.png" height="13" /></a></p>
 
 <p>DigitalOcean provides simple cloud hosting. Create and delete
 SSD-based virtual machines within seconds for a very affordable price.</p>
@@ -72,6 +74,8 @@ SSD-based virtual machines within seconds for a very affordable price.</p>
 
 <p>This gem is a simple ruby wrapper for the <a href="https://api.digitalocean.com/">HTTP API of DigitalOcean</a> using
 the great <a href="https://github.com/lostisland/faraday">Faraday</a> library.</p>
+
+<p><strong><em>If you use <a href="http://www.opscode.com/">Opscode Chef</a> for DevOps, make sure to checkout my knife plugin <a href="https://github.com/rmoriz/knife-digital_ocean">knife-digital_ocean</a></em></strong></p>
 
 <h2>Installation</h2>
 
@@ -214,10 +218,10 @@ resources.</p>
 <ul>
 <li>should be successful</li>
 </ul></li>
-<li>#reset_root_password
+<li>#password_reset
 
 <ul>
-<li>should be successful (PENDING: does not work, ask digitalocean to fix)</li>
+<li>should be successful</li>
 </ul></li>
 <li>#resize
 
@@ -364,17 +368,32 @@ resources.</p>
 <li>Create new Pull Request</li>
 </ol>
 
+<h3>Contributors</h3>
+
+<ul>
+<li>  <a href="https://github.com/joshfng">joshfng</a> </li>
+<li>  <a href="https://github.com/willglynn">willglynn</a> </li>
+</ul>
+
+<p>For more information and a complete list see <a href="https://github.com/rmoriz/digital_ocean/contributors">the contributor page on GitHub</a>.</p>
+
 <h2>License</h2>
 
 <p>MIT</p>
 
+<h2>Commercial Support</h2>
+
+<p>Commercial support is available. Please contact <a href="https://roland.io/">https://roland.io/</a> or <a href="http://moriz.com/">http://moriz.com/</a></p>
+
 <h2>Copyright</h2>
 
-<p>2013 Moriz GmbH, <a href="https://moriz.de/">https://moriz.de/</a></p>
+<p>Copyright © 2013 <a href="https://roland.io">Roland Moriz</a>, <a href="https://moriz.de/">Moriz GmbH</a></p>
+
+<p><a href="http://www.linkedin.com/in/rmoriz"><img src="http://www.linkedin.com/img/webpromo/btn_viewmy_160x25.png" alt="LinkedIn"></a></p>
 </div></div>
 
     <div id="footer">
-  Generated on Tue Feb 12 01:59:26 2013 by
+  Generated on Wed Feb 20 12:33:48 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.3 (ruby-1.9.3).
 </div>
