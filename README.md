@@ -121,8 +121,8 @@ resources.
       - should be successful
     - \#power\_off
       - should be successful
-    - \#reset\_root\_password
-      - should be successful (PENDING: does not work, ask digitalocean to fix)
+    - \#password\_reset
+      - should be successful
     - \#resize
       - should be successful
     - \#snapshot
@@ -200,6 +200,7 @@ resources.
 
 ### Contributors
 
+*   [joshfng](https://github.com/joshfng) 
 *   [willglynn](https://github.com/willglynn) 
 
 For more information and a complete list see [the contributor page on GitHub](https://github.com/rmoriz/digital_ocean/contributors).
