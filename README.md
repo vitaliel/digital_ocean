@@ -190,6 +190,10 @@ resources.
 ### DigitalOcean
   - should have a version number
 
+## ChangeLog / History / Releases
+
+see the [CHANGELOG.md](./CHANGELOG.md) file.
+
 ## Contributing
 
 1. Fork it
