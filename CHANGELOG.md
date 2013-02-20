@@ -15,7 +15,7 @@
 
 **Enhancements:**
 
-* support password reset (thanks )
+* support password reset (contributed by github user joshfng)
 
 * documentation
 
