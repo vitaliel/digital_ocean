@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.digitalocean.com/droplets/87071/restore?client_id=client_id_XXXXXXXXXXXXXXXXXXX&api_key=api_key_YYYYYYYYYYYYYYYYYYYYY&image_id=57658
+    uri: https://api.digitalocean.com/droplets/106265/restore?client_id=client_id_XXXXXXXXXXXXXXXXXXX&api_key=api_key_YYYYYYYYYYYYYYYYYYYYY&image_id=57658
     body:
       encoding: US-ASCII
       string: ''

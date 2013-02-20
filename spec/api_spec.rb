@@ -13,7 +13,7 @@ describe DigitalOcean::API, :vcr do
   end
 
   describe '#droplets' do
-    let(:droplet_id) { 87071 }
+    let(:droplet_id) { 106265 }
 
     describe '#list' do
       let(:response) {
@@ -120,13 +120,13 @@ describe DigitalOcean::API, :vcr do
       end
     end
 
-    describe '#reset_root_password' do
+    describe '#password_reset' do
       let(:response) {
-        subject.droplets.reset_root_password droplet_id
+        subject.droplets.password_reset droplet_id
       }
 
       it 'should be successful' do
-        pending "does not work, ask digitalocean to fix"
+        # an mail with login/password is triggered...
         #<Hashie::Rash event_id=123456 status="OK">
         response.status.should eql('OK')
       end

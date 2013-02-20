@@ -15,7 +15,7 @@ http_interactions:
       server:
       - nginx
       date:
-      - Wed, 23 Jan 2013 12:38:25 GMT
+      - Wed, 20 Feb 2013 11:05:14 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -26,6 +26,8 @@ http_interactions:
       - '200'
       x-powered-by:
       - Phusion Passenger (mod_rails/mod_rack) 3.0.11
+      strict-transport-security:
+      - max-age=31536000
       x-ua-compatible:
       - IE=Edge,chrome=1
       etag:
@@ -35,14 +37,14 @@ http_interactions:
       set-cookie:
       - _digitalocean2_session=wtf
       x-request-id:
-      - 2110036f9f67090da25bd1956e627f57
+      - d53e8b9c2b96e35211e9ecd5cfb7e060
       x-runtime:
-      - '0.865003'
+      - '0.815706'
       x-rack-cache:
       - miss
     body:
       encoding: US-ASCII
-      string: ! '{"status":"OK","droplets":[{"id":83102,"name":"app200.ams.nl.moriz.net","image_id":25306,"size_id":63,"region_id":2,"backups_active":true,"ip_address":"185.14.185.158","status":"active"}]}'
+      string: ! '{"status":"OK","droplets":[{"id":83102,"name":"app200.ams.nl.moriz.net","image_id":25306,"size_id":63,"region_id":2,"backups_active":true,"ip_address":"185.14.185.158","status":"active"},{"id":106265,"name":"test","image_id":25306,"size_id":66,"region_id":2,"backups_active":null,"ip_address":"192.81.220.107","status":"active"}]}'
     http_version: 
-  recorded_at: Wed, 23 Jan 2013 12:38:25 GMT
+  recorded_at: Wed, 20 Feb 2013 11:05:14 GMT
 recorded_with: VCR 2.4.0

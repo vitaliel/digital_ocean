@@ -1,8 +1,8 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: https://api.digitalocean.com/droplets/87071/reset_root_password?client_id=client_id_XXXXXXXXXXXXXXXXXXX&api_key=api_key_YYYYYYYYYYYYYYYYYYYYY
+    method: post
+    uri: https://api.digitalocean.com/droplets/106265/password_reset?client_id=client_id_XXXXXXXXXXXXXXXXXXX&api_key=api_key_YYYYYYYYYYYYYYYYYYYYY
     body:
       encoding: US-ASCII
       string: ''
@@ -15,7 +15,7 @@ http_interactions:
       server:
       - nginx
       date:
-      - Thu, 24 Jan 2013 09:32:49 GMT
+      - Wed, 20 Feb 2013 11:05:22 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -26,6 +26,8 @@ http_interactions:
       - '200'
       x-powered-by:
       - Phusion Passenger (mod_rails/mod_rack) 3.0.11
+      strict-transport-security:
+      - max-age=31536000
       x-ua-compatible:
       - IE=Edge,chrome=1
       etag:
@@ -35,15 +37,14 @@ http_interactions:
       set-cookie:
       - _digitalocean2_session=wtf
       x-request-id:
-      - 9afe59e1a314b1439025a541fe490efd
+      - 9f4b75f0120eaddc22201a9127261e0f
       x-runtime:
-      - '0.102896'
+      - '0.117888'
       x-rack-cache:
-      - miss
+      - invalidate, pass
     body:
       encoding: US-ASCII
-      string: ! '{"status":"ERROR","error_message":{"action":["Invalid Action - The
-        action you specified cannot be found"]}}'
+      string: ! '{"status":"OK","event_id":765549}'
     http_version: 
-  recorded_at: Thu, 24 Jan 2013 09:32:50 GMT
+  recorded_at: Wed, 20 Feb 2013 11:05:22 GMT
 recorded_with: VCR 2.4.0

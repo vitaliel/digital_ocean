@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: put
-    uri: https://api.digitalocean.com/droplets/87071/shutdown?client_id=client_id_XXXXXXXXXXXXXXXXXXX&api_key=api_key_YYYYYYYYYYYYYYYYYYYYY
+    uri: https://api.digitalocean.com/droplets/106265/shutdown?client_id=client_id_XXXXXXXXXXXXXXXXXXX&api_key=api_key_YYYYYYYYYYYYYYYYYYYYY
     body:
       encoding: US-ASCII
       string: ''
@@ -15,7 +15,7 @@ http_interactions:
       server:
       - nginx
       date:
-      - Thu, 24 Jan 2013 09:26:01 GMT
+      - Wed, 20 Feb 2013 11:05:19 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -26,6 +26,8 @@ http_interactions:
       - '200'
       x-powered-by:
       - Phusion Passenger (mod_rails/mod_rack) 3.0.11
+      strict-transport-security:
+      - max-age=31536000
       x-ua-compatible:
       - IE=Edge,chrome=1
       etag:
@@ -35,14 +37,14 @@ http_interactions:
       set-cookie:
       - _digitalocean2_session=wtf
       x-request-id:
-      - e131def10d626b38a82b4506bd4c03aa
+      - 903282a88afbdf0a4882cc17918e9b5b
       x-runtime:
-      - '0.559939'
+      - '0.186379'
       x-rack-cache:
       - invalidate, pass
     body:
       encoding: US-ASCII
-      string: ! '{"status":"OK","event_id":594619}'
+      string: ! '{"status":"OK","event_id":765546}'
     http_version: 
-  recorded_at: Thu, 24 Jan 2013 09:26:01 GMT
+  recorded_at: Wed, 20 Feb 2013 11:05:20 GMT
 recorded_with: VCR 2.4.0

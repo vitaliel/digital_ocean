@@ -15,7 +15,7 @@ http_interactions:
       server:
       - nginx
       date:
-      - Thu, 24 Jan 2013 09:06:36 GMT
+      - Wed, 20 Feb 2013 11:05:16 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -26,6 +26,8 @@ http_interactions:
       - '200'
       x-powered-by:
       - Phusion Passenger (mod_rails/mod_rack) 3.0.11
+      strict-transport-security:
+      - max-age=31536000
       x-ua-compatible:
       - IE=Edge,chrome=1
       etag:
@@ -35,14 +37,14 @@ http_interactions:
       set-cookie:
       - _digitalocean2_session=wtf
       x-request-id:
-      - 92c20c5ff4c03cd11de1a1faf1b3203c
+      - f160f34639183afd5f552d2af4b05db7
       x-runtime:
-      - '1.849309'
+      - '0.333447'
       x-rack-cache:
       - miss
     body:
       encoding: US-ASCII
-      string: ! '{"status":"OK","droplet":{"id":87071,"name":"t1","image_id":25306,"size_id":66,"event_id":594537}}'
+      string: ! '{"status":"OK","droplet":{"id":106267,"name":"t1","image_id":25306,"size_id":66,"event_id":765542}}'
     http_version: 
-  recorded_at: Thu, 24 Jan 2013 09:06:36 GMT
+  recorded_at: Wed, 20 Feb 2013 11:05:16 GMT
 recorded_with: VCR 2.4.0
