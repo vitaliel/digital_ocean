@@ -1,7 +1,7 @@
 # DigitalOcean
 [![Build Status](https://travis-ci.org/rmoriz/digital_ocean.png)](https://travis-ci.org/rmoriz/digital_ocean)
-<a href="https://gemnasium.com/rmoriz/digital_ocean"><img src="https://gemnasium.com/rmoriz/digital_ocean.png" height="13" /></a>
-<a href="https://codeclimate.com/github/rmoriz/digital_ocean"><img src="https://codeclimate.com/github/rmoriz/digital_ocean.png" height="13" /></a>
+<a href="https://gemnasium.com/rmoriz/digital_ocean"><img src="https://gemnasium.com/rmoriz/digital_ocean.png"/></a>
+<a href="https://codeclimate.com/github/rmoriz/digital_ocean"><img src="https://codeclimate.com/github/rmoriz/digital_ocean.png"/></a>
 
 DigitalOcean provides simple cloud hosting. Create and delete
 SSD-based virtual machines within seconds for a very affordable price.
