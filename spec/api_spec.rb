@@ -59,7 +59,7 @@ describe DigitalOcean::API, :vcr do
         # #<Hashie::Rash droplet=#<Hashie::Rash event_id=123456 id=87071 image_id=25306 name="t1" size_id=66> status="OK">
         response.status.should eql('OK')
       end
-      
+
       it 'should return droplet.id' do
         response.droplet.id.should_not be_nil
       end
@@ -255,6 +255,8 @@ describe DigitalOcean::API, :vcr do
   end
 
   describe '#ssh_keys' do
+    let(:test_ssh_key_id) { 6757 }
+
     describe '#list' do
       let(:response) {
         subject.ssh_keys.list
@@ -296,29 +298,39 @@ describe DigitalOcean::API, :vcr do
     end
 
     describe '#add' do
-      pending "does not work, ask digitalocean to fix"
-
       let(:response) {
-        subject.ssh_keys.add :name => name, :ssh_key_pub => ssh_key_pub
+        subject.ssh_keys.add :name => name, :ssh_pub_key => ssh_key_pub
       }
       let(:name) { 'mobile computer' }
-      let(:ssh_key_pub) {'xxx' }
+      let(:ssh_key_pub) { 'ssh-dss AAAAB3NzaC1kc3MAAACBAPUify/0h4QLkkhfMiOr8o5R6LEzV1ETC4cd7UgKUiLsX8+E+s5hmbP6QvkWVyc1qpXuH7zyFj/FY5XSBdNyVVUblOxrOJVo9wPdl5ZaXxMkx+/xokVqfDvoeQa5adaBbk11xjt7F72KBeWb5WwZScblK4kOIrVT5HzNxl58xE2XAAAAFQDyqQMKaDAoUcUlEeoFC962WZE6kQAAAIAv83TOiGZ81zIqJ1+AQNNeUoXbDF/u0B5qVgmr8rGxJ/C24M/LaLqpWB0fNb1xSF1luT33BN/NEFJ/MiUA53yffXkjFMcBbJPVDuxHh7/qLOWX0SlrH6IhKvTU6iowPb+m0bBXQM8z6jR1Xyl6F2eb3HZfW0O15i+wDCjPeplfpwAAAIEA1zxtI3CackcnOAH2su9v/SBZPrfyir52ie1/+rH0WVnnAbc7yJRMOuRHZCZo4MXoQ+9/QoxBBxvBinabrlVPvwnRgGIOTcHOlo8Hs07THA6mlnLUcG/QNKFyR25XI86ntx3dg+n89fUo302dWZAQ5vSl5nbqvsBs56wfWFvOYS8= test@example.com' }
 
-      xit 'should be successful' do
-        puts response.status
+      it 'should be successful' do
         response.status.should eql('OK')
       end
     end
 
     describe '#edit' do
-      pending "does not work, ask digitalocean to fix"
+      let(:response) {
+        subject.ssh_keys.edit test_ssh_key_id, :name => name, :ssh_pub_key => ssh_key_pub
+      }
+      let(:name) { 'mobile computer new' }
+      let(:ssh_key_pub) { 'ssh-rsa AAAAB3NzaC1kc3MAAACBAPUify/0h4QLkkhfMiOr8o5R6LEzV1ETC4cd7UgKUiLsX8+E+s5hmbP6QvkWVyc1qpXuH7zyFj/FY5XSBdNyVVUblOxrOJVo9wPdl5ZaXxMkx+/xokVqfDvoeQa5adaBbk11xjt7F72KBeWb5WwZScblK4kOIrVT5HzNxl58xE2XAAAAFQDyqQMKaDAoUcUlEeoFC962WZE6kQAAAIAv83TOiGZ81zIqJ1+AQNNeUoXbDF/u0B5qVgmr8rGxJ/C24M/LaLqpWB0fNb1xSF1luT33BN/NEFJ/MiUA53yffXkjFMcBbJPVDuxHh7/qLOWX0SlrH6IhKvTU6iowPb+m0bBXQM8z6jR1Xyl6F2eb3HZfW0O15i+wDCjPeplfpwAAAIEA1zxtI3CackcnOAH2su9v/SBZPrfyir52ie1/+rH0WVnnAbc7yJRMOuRHZCZo4MXoQ+9/QoxBBxvBinabrlVPvwnRgGIOTcHOlo8Hs07THA6mlnLUcG/QNKFyR25XI86ntx3dg+n89fUo302dWZAQ5vSl5nbqvsBs56wfWFvOYS8= test@example.com' }
+
+      it 'should be successful' do
+        response.status.should eql('OK')
+      end
     end
 
     describe '#delete' do
-      let(:id) { 3928 }
+      let(:name) { 'test_for_deletion' }
+      let(:ssh_key_pub) { 'ssh-dss AAAAB3NzaC1kc3MAAACBAPUify/0h4QLkkhfMiOr8o5R6LEzV1ETC4cd7UgKUiLsX8+E+s5hmbP6QvkWVyc1qpXuH7zyFj/FY5XSBdNyVVUblOxrOJVo9wPdl5ZaXxMkx+/xokVqfDvoeQa5adaBbk11xjt7F72KBeWb5WwZScblK4kOIrVT5HzNxl58xE2XAAAAFQDyqQMKaDAoUcUlEeoFC962WZE6kQAAAIAv83TOiGZ81zIqJ1+AQNNeUoXbDF/u0B5qVgmr8rGxJ/C24M/LaLqpWB0fNb1xSF1luT33BN/NEFJ/MiUA53yffXkjFMcBbJPVDuxHh7/qLOWX0SlrH6IhKvTU6iowPb+m0bBXQM8z6jR1Xyl6F2eb3HZfW0O15i+wDCjPeplfpwAAAIEA1zxtI3CackcnOAH2su9v/SBZPrfyir52ie1/+rH0WVnnAbc7yJRMOuRHZCZo4MXoQ+9/QoxBBxvBinabrlVPvwnRgGIOTcHOlo8Hs07THA6mlnLUcG/QNKFyR25XI86ntx3dg+n89fUo302dWZAQ5vSl5nbqvsBs56wfWFvOYS8= test@example.com' }
+
+      let!(:create_response) {
+        subject.dup.ssh_keys.add :name => name, :ssh_pub_key => ssh_key_pub
+      }
 
       let(:response) {
-        subject.ssh_keys.delete id
+        subject.ssh_keys.delete create_response.ssh_key.id
       }
 
       it 'should be successful' do
