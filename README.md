@@ -136,7 +136,6 @@ resources.
     - \#disable\_backups
       - should be successful
     - \#delete
-#<Hashie::Rash event_id=594739 status="OK">
       - should be successful
   - \#sizes
     - \#list
@@ -158,10 +157,9 @@ resources.
       - invalid
         - should not be successful
     - \#add
-      - does not work, ask digitalocean to fix (PENDING: No reason given)
-      - should be successful (PENDING: Temporarily disabled with xit)
+      - should be successful
     - \#edit
-      - does not work, ask digitalocean to fix (PENDING: No reason given)
+      - should be successful
     - \#delete
       - should be successful
   - \#images
