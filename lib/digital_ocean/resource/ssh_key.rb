@@ -10,18 +10,20 @@ module DigitalOcean
       end
 
       def delete(id)
-        @connection.delete("/ssh_keys/#{id}").body
+        @connection.get("/ssh_keys/#{id}/destroy").body
       end
 
-      #def add(args)
-      #  @connection.get('/ssh_keys.json') do |query|
-      #    apply_params(query, args)
-      #  end.body
-      #end
-      #
-      #def edit
-      #end
-      #
+      def add(args)
+        @connection.get('/ssh_keys/new') do |query|
+          apply_params(query, args)
+        end.body
+      end
+
+      def edit(id, args)
+        @connection.get("/ssh_keys/#{id}/edit") do |query|
+          apply_params(query, args)
+        end.body
+      end
     end
   end
 end
