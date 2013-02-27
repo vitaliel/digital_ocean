@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.digitalocean.com/ssh_keys.json?client_id=client_id_XXXXXXXXXXXXXXXXXXX&api_key=api_key_YYYYYYYYYYYYYYYYYYYYY
+    uri: https://api.digitalocean.com/ssh_keys/new?client_id=client_id_XXXXXXXXXXXXXXXXXXX&api_key=api_key_YYYYYYYYYYYYYYYYYYYYY&name=mobile+computer&ssh_pub_key=ssh-dss+AAAAB3NzaC1kc3MAAACBAPUify%2F0h4QLkkhfMiOr8o5R6LEzV1ETC4cd7UgKUiLsX8%2BE%2Bs5hmbP6QvkWVyc1qpXuH7zyFj%2FFY5XSBdNyVVUblOxrOJVo9wPdl5ZaXxMkx%2B%2FxokVqfDvoeQa5adaBbk11xjt7F72KBeWb5WwZScblK4kOIrVT5HzNxl58xE2XAAAAFQDyqQMKaDAoUcUlEeoFC962WZE6kQAAAIAv83TOiGZ81zIqJ1%2BAQNNeUoXbDF%2Fu0B5qVgmr8rGxJ%2FC24M%2FLaLqpWB0fNb1xSF1luT33BN%2FNEFJ%2FMiUA53yffXkjFMcBbJPVDuxHh7%2FqLOWX0SlrH6IhKvTU6iowPb%2Bm0bBXQM8z6jR1Xyl6F2eb3HZfW0O15i%2BwDCjPeplfpwAAAIEA1zxtI3CackcnOAH2su9v%2FSBZPrfyir52ie1%2F%2BrH0WVnnAbc7yJRMOuRHZCZo4MXoQ%2B9%2FQoxBBxvBinabrlVPvwnRgGIOTcHOlo8Hs07THA6mlnLUcG%2FQNKFyR25XI86ntx3dg%2Bn89fUo302dWZAQ5vSl5nbqvsBs56wfWFvOYS8%3D+test%40example.com
     body:
       encoding: US-ASCII
       string: ''
@@ -15,7 +15,7 @@ http_interactions:
       server:
       - nginx
       date:
-      - Wed, 23 Jan 2013 20:20:06 GMT
+      - Wed, 27 Feb 2013 18:51:58 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -26,6 +26,8 @@ http_interactions:
       - '200'
       x-powered-by:
       - Phusion Passenger (mod_rails/mod_rack) 3.0.11
+      strict-transport-security:
+      - max-age=31536000
       x-ua-compatible:
       - IE=Edge,chrome=1
       etag:
@@ -35,14 +37,16 @@ http_interactions:
       set-cookie:
       - _digitalocean2_session=wtf
       x-request-id:
-      - 4c6c620cf4b58304db623f7c0b13fc44
+      - 09bc85776139396e36b814334d143beb
       x-runtime:
-      - '0.664323'
+      - '0.812746'
       x-rack-cache:
       - miss
     body:
       encoding: US-ASCII
-      string: ! '{"status":"OK","ssh_keys":[{"id":3738,"name":"default"},{"id":3928,"name":"xxx"}]}'
+      string: ! '{"status":"OK","ssh_key":{"id":6760,"name":"mobile computer","ssh_pub_key":"ssh-dss
+        AAAAB3NzaC1kc3MAAACBAPUify/0h4QLkkhfMiOr8o5R6LEzV1ETC4cd7UgKUiLsX8+E+s5hmbP6QvkWVyc1qpXuH7zyFj/FY5XSBdNyVVUblOxrOJVo9wPdl5ZaXxMkx+/xokVqfDvoeQa5adaBbk11xjt7F72KBeWb5WwZScblK4kOIrVT5HzNxl58xE2XAAAAFQDyqQMKaDAoUcUlEeoFC962WZE6kQAAAIAv83TOiGZ81zIqJ1+AQNNeUoXbDF/u0B5qVgmr8rGxJ/C24M/LaLqpWB0fNb1xSF1luT33BN/NEFJ/MiUA53yffXkjFMcBbJPVDuxHh7/qLOWX0SlrH6IhKvTU6iowPb+m0bBXQM8z6jR1Xyl6F2eb3HZfW0O15i+wDCjPeplfpwAAAIEA1zxtI3CackcnOAH2su9v/SBZPrfyir52ie1/+rH0WVnnAbc7yJRMOuRHZCZo4MXoQ+9/QoxBBxvBinabrlVPvwnRgGIOTcHOlo8Hs07THA6mlnLUcG/QNKFyR25XI86ntx3dg+n89fUo302dWZAQ5vSl5nbqvsBs56wfWFvOYS8=
+        test@example.com"}}'
     http_version: 
-  recorded_at: Wed, 23 Jan 2013 20:20:06 GMT
+  recorded_at: Wed, 27 Feb 2013 18:51:58 GMT
 recorded_with: VCR 2.4.0
