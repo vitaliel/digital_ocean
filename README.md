@@ -1,4 +1,5 @@
 # DigitalOcean
+### The best tested and most popular ruby gem to interact with the DigitalOcean API.
 [![Build Status](https://travis-ci.org/rmoriz/digital_ocean.png)](https://travis-ci.org/rmoriz/digital_ocean)
 [![Coverage Status](https://coveralls.io/repos/rmoriz/digital_ocean/badge.png?branch=master)](https://coveralls.io/r/rmoriz/digital_ocean)
 <a href="https://codeclimate.com/github/rmoriz/digital_ocean"><img src="https://codeclimate.com/github/rmoriz/digital_ocean.png"/></a>
