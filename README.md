@@ -15,6 +15,7 @@ the great [Faraday](https://github.com/lostisland/faraday) library.
 
 __*If you use [Opscode Chef](http://www.opscode.com/) for DevOps, make sure to checkout my knife plugin [knife-digital_ocean](https://github.com/rmoriz/knife-digital_ocean)*__
 
+__*Want to manage your servers from your iPad or iPhone? [Download our iOS application here!](https://itunes.apple.com/us/app/cloudocean/id616323450?mt=8)*__
 ## Installation
 
 Add this line to your application's Gemfile:
