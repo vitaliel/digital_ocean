@@ -1,6 +1,13 @@
 ## unreleased
 
-* [Full Changelog](https://github.com/rmoriz/digital_ocean/compare/v1.0.0...master)
+* [Full Changelog](https://github.com/rmoriz/digital_ocean/compare/v1.0.1...master)
+
+
+## 1.0.1 / 2013-30-26
+
+* specified explicit min. version of faraday_middleware
+
+* [Full Changelog](https://github.com/rmoriz/digital_ocean/compare/v1.0.0...v1.0.1)
 
 
 ## 1.0.0 / 2013-03-10
