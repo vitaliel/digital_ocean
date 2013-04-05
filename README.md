@@ -218,10 +218,19 @@ MIT
 
 Commercial support is available. Please contact [https://roland.io/](https://roland.io/) or [http://moriz.com/](http://moriz.com/)
 
+
+## Mobile Application
+
+Ever wanted to control your DigitalOcean Droplets with your iPhone, iPad or iPod Touch?
+
+[Get my CloudOcean App!](http://cloudoceanapp.com/)
+
+[![CloudOcean - DigitalOcean iOS app](http://i.imgur.com/JLQua2w.png)](http://cloudoceanapp.com/)
+
+
 ## Copyright
 
 Copyright © 2013 [Roland Moriz](https://roland.io), [Moriz GmbH](https://moriz.de/)
 
 [![LinkedIn](http://www.linkedin.com/img/webpromo/btn_viewmy_160x25.png)](http://www.linkedin.com/in/rmoriz)
 [![Twitter](http://i.imgur.com/1kYFHlu.png)](https://twitter.com/rmoriz)
-
