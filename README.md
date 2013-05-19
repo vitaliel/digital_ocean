@@ -46,7 +46,8 @@ require 'digital_ocean'
 # 1. create a client instance
 #
 dc = DigitalOcean::API.new :client_id => 'YOUR_CLIENT_ID', 
-                           :api_key   => 'YOUR_API_KEY'
+                           :api_key   => 'YOUR_API_KEY',
+                           :debug     => true   # turn on verbose request debug information
 
 # 2. get all regions (server locations)
 #
