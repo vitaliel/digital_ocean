@@ -17,6 +17,7 @@ module DigitalOcean
       @client_id       = params[:client_id]
       @api_key         = params[:api_key]
       @debug           = params[:debug]
+      @ssl             = params[:ssl] || { :verify => true }
       @base_url        = params[:base_url]        || 'https://api.digitalocean.com/'
       @faraday_adapter = params[:faraday_adapter] || Faraday.default_adapter
       @faraday         = params[:faraday]         || default_faraday
@@ -61,7 +62,7 @@ module DigitalOcean
     end
 
     def default_faraday
-      Faraday.new(:url => @base_url) do |faraday|
+      Faraday.new(:url => @base_url, :ssl => @ssl) do |faraday|
         faraday.use AuthenticationMiddleware, @client_id, @api_key
         faraday.request  :url_encoded
         faraday.response :rashify

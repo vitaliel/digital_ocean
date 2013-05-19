@@ -1,5 +1,7 @@
 ## unreleased
 
+* improved SSL configuration. defaults to VERIFY_PEER
+
 * [Full Changelog](https://github.com/rmoriz/digital_ocean/compare/v1.0.1...master)
 
 

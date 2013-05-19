@@ -12,6 +12,12 @@ describe DigitalOcean::API, :vcr do
     end
   end
 
+  describe 'ssl settings' do
+    it 'should by default enforce ssl' do
+      subject.default_faraday.ssl.should == { :verify => true }
+    end
+  end
+
   describe '#droplets' do
     let(:droplet_id) { 106265 }
 
