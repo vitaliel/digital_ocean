@@ -1,3 +1,17 @@
+# Warning!
+
+DigitalOcean is changing their API without notification of customers, including the author of this gem. In the past this has lead into several issues with users having problems or see unexpected behaviour.
+As the author of this gem I don't make any money and DigitalOcean is not paying me, either. My spare time is limited and I hate to debug other company's problems or sneak into forums to find information / hidden API resources.
+
+**If you run into any problem, please contact Digital Ocean first.**
+
+**If you run into any problem, please contact Digital Ocean first.**
+
+**If you run into any problem, please contact Digital Ocean first.**
+
+
+Thank you.
+
 # DigitalOcean
 ### The best tested and most popular ruby gem to interact with the DigitalOcean API.
 
