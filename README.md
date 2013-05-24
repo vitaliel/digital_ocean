@@ -48,7 +48,7 @@ Or install it yourself as:
 
 ## Prerequisite: Create an account and API credentials
 
-[![Create API credentials](http://i.imgur.com/1iYdSFF.png)](https://www.digitalocean.com/login)
+[![Create API credentials](http://i.imgur.com/96q4zCx.png)](https://www.digitalocean.com/login)
 
 ## Usage
 
