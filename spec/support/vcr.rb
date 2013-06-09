@@ -11,9 +11,7 @@ VCR.configure do |c|
     c.filter_sensitive_data('api_key_YYYYYYYYYYYYYYYYYYYYY') { ENV['DIGITAL_OCEAN_API_KEY']   }
   end
 
-  c.filter_sensitive_data('_digitalocean2_session=wtf') do |http_interaction|
-    http_interaction.response.headers['set-cookie'].first
-  end
+  # modern DigitalOcean API frontend doesn't send cookie_set header
 
   c.filter_sensitive_data('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') do |http_interaction|
     http_interaction.response.headers['etag'].first

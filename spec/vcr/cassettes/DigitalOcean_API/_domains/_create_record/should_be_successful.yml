@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.digitalocean.com/domains/30163/records/new?client_id=client_id_XXXXXXXXXXXXXXXXXXX&api_key=api_key_YYYYYYYYYYYYYYYYYYYYY&record_type=TXT&name=foo&data=bar
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Sun, 09 Jun 2013 15:36:11 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      etag:
+      - XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - ddcf815378fd5e67c33862d45869c95f
+      x-runtime:
+      - '0.138155'
+      x-rack-cache:
+      - miss
+    body:
+      encoding: US-ASCII
+      string: ! '{"status":"OK","record":{"id":206996,"domain_id":30163,"record_type":"TXT","name":"foo","data":"bar","priority":null,"port":null,"weight":null}}'
+    http_version: 
+  recorded_at: Sun, 09 Jun 2013 15:36:11 GMT
+recorded_with: VCR 2.5.0

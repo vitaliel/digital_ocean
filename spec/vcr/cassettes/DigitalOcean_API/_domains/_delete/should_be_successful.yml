@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.digitalocean.com/domains/30158/destroy?client_id=client_id_XXXXXXXXXXXXXXXXXXX&api_key=api_key_YYYYYYYYYYYYYYYYYYYYY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Sun, 09 Jun 2013 15:16:12 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      etag:
+      - XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - aa71b9fb8c13fbdf03d0a23b8fd0b7bb
+      x-runtime:
+      - '0.163320'
+      x-rack-cache:
+      - miss
+    body:
+      encoding: US-ASCII
+      string: ! '{"status":"OK"}'
+    http_version: 
+  recorded_at: Sun, 09 Jun 2013 15:16:12 GMT
+recorded_with: VCR 2.5.0

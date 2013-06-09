@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.digitalocean.com/domains/26230?client_id=client_id_XXXXXXXXXXXXXXXXXXX&api_key=api_key_YYYYYYYYYYYYYYYYYYYYY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Sat, 08 Jun 2013 17:17:59 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      etag:
+      - XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - d1dfeb15e1fd8c5731218cbfcf9d9f89
+      x-runtime:
+      - '0.119440'
+      x-rack-cache:
+      - miss
+    body:
+      encoding: US-ASCII
+      string: ! '{"status":"OK","domain":{"id":26230,"name":"chefserver.do.cityhawk.ru","ttl":10800,"live_zone_file":"$TTL\t600\n@\t\tIN\tSOA\tNS1.DIGITALOCEAN.COM.\thostmaster.chefserver.do.cityhawk.ru.
+        (\n\t\t\t1369610095 ; last update: 2013-05-26 23:14:55 UTC\n\t\t\t3600 ; refresh\n\t\t\t900
+        ; retry\n\t\t\t1209600 ; expire\n\t\t\t10800 ; ttl\n\t\t\t)\n             IN      NS      NS1.DIGITALOCEAN.COM.\n                     NS      NS2.DIGITALOCEAN.COM.\n                     NS      NS3.DIGITALOCEAN.COM.\n@\tIN
+        A\t192.81.213.70\n","error":null,"zone_file_with_error":null}}'
+    http_version: 
+  recorded_at: Sat, 08 Jun 2013 17:17:59 GMT
+recorded_with: VCR 2.5.0
