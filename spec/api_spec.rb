@@ -440,4 +440,120 @@ describe DigitalOcean::API, :vcr do
     end
 
   end
+
+  describe '#domains' do
+    describe '#list' do
+      let(:response) {
+        subject.domains.list
+      }
+
+      it 'should be successful' do
+        response.status.should eql('OK')
+      end
+
+      it 'should return a list of all domains' do
+        response.domains.should have_at_least(1).item
+      end
+    end
+
+    describe '#show' do
+      let(:id) { 26230 }
+      let(:response) {
+        subject.domains.show id
+      }
+
+      it 'should be successful' do
+        response.status.should eql('OK')
+      end
+    end
+
+    describe '#create' do
+      let(:name)        { 'test.do.cityhawk.ru'  }
+      let(:ip_address)  { '192.81.213.70' }
+
+      let(:response) {
+        subject.domains.create :name        => name,
+                               :ip_address  => ip_address
+      }
+
+      it 'should be successful' do
+        response.status.should eql('OK')
+      end
+
+      it 'should return domain.id' do
+        response.domain.id.should_not be_nil
+      end
+    end
+
+    describe '#delete' do
+      let(:domain_id) { 30158 }
+      let(:response) {
+        subject.domains.delete domain_id
+      }
+
+      it 'should be successful' do
+        response.status.should eql('OK')
+      end
+    end
+
+    let(:record_domain_id) { 30163 }
+
+    describe '#list_records' do
+      let(:response) {
+        subject.domains.list_records record_domain_id
+      }
+
+      it 'should be successful' do
+        response.status.should eql('OK')
+      end
+
+      it 'should return a list of all domain records' do
+        response.records.should have_at_least(1).item
+      end
+    end
+
+    describe '#show_record' do
+      let(:record_id) { 206982 }
+      let(:response) {
+        subject.domains.show_record record_domain_id, record_id
+      }
+
+      it 'should be successful' do
+        response.status.should eql('OK')
+      end
+    end
+
+    describe '#create_record' do
+      let(:record_type)        { 'TXT'  }
+      let(:name)  { 'foo' }
+      let(:data)  { 'bar' }
+
+      let(:response) {
+        subject.domains.create_record record_domain_id,
+                                      :record_type => record_type,
+                                      :name        => name,
+                                      :data        => data
+      }
+
+      it 'should be successful' do
+        response.status.should eql('OK')
+      end
+
+      it 'should return record.id' do
+        response.record.id.should_not be_nil
+      end
+    end
+
+    describe '#delete_record' do
+      let(:record_id) { 206997 }
+      let(:response) {
+        subject.domains.delete_record record_domain_id, record_id
+      }
+
+      it 'should be successful' do
+        response.status.should eql('OK')
+      end
+    end
+
+  end
 end

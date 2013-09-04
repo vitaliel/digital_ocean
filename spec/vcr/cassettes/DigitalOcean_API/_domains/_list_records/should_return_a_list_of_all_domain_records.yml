@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.digitalocean.com/domains/30163/records?client_id=client_id_XXXXXXXXXXXXXXXXXXX&api_key=api_key_YYYYYYYYYYYYYYYYYYYYY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Sun, 09 Jun 2013 15:26:20 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      etag:
+      - XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - c0f38e0bac600bc2865e50e5471b9baf
+      x-runtime:
+      - '0.137823'
+      x-rack-cache:
+      - miss
+    body:
+      encoding: US-ASCII
+      string: ! '{"status":"OK","records":[{"id":206982,"domain_id":30163,"record_type":"A","name":"@","data":"192.81.213.70","priority":null,"port":null,"weight":null},{"id":206983,"domain_id":30163,"record_type":"NS","name":null,"data":"NS1.DIGITALOCEAN.COM.","priority":null,"port":null,"weight":null},{"id":206984,"domain_id":30163,"record_type":"NS","name":null,"data":"NS2.DIGITALOCEAN.COM.","priority":null,"port":null,"weight":null},{"id":206985,"domain_id":30163,"record_type":"NS","name":null,"data":"NS3.DIGITALOCEAN.COM.","priority":null,"port":null,"weight":null}]}'
+    http_version: 
+  recorded_at: Sun, 09 Jun 2013 15:26:20 GMT
+recorded_with: VCR 2.5.0

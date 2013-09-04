@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.digitalocean.com/domains?client_id=client_id_XXXXXXXXXXXXXXXXXXX&api_key=api_key_YYYYYYYYYYYYYYYYYYYYY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Sat, 08 Jun 2013 17:03:38 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      etag:
+      - XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      cache-control:
+      - max-age=0, private, must-revalidate
+      set-cookie:
+      - _digitalocean2_session=wtf
+      x-request-id:
+      - ea432f6489356530d389d223248bc78f
+      x-runtime:
+      - '0.219462'
+      x-rack-cache:
+      - miss
+    body:
+      encoding: US-ASCII
+      string: ! '{"status":"OK","domains":[{"id":26230,"name":"chefserver.do.cityhawk.ru","ttl":10800,"live_zone_file":"$TTL\t600\n@\t\tIN\tSOA\tNS1.DIGITALOCEAN.COM.\thostmaster.chefserver.do.cityhawk.ru.
+        (\n\t\t\t1369610095 ; last update: 2013-05-26 23:14:55 UTC\n\t\t\t3600 ; refresh\n\t\t\t900
+        ; retry\n\t\t\t1209600 ; expire\n\t\t\t10800 ; ttl\n\t\t\t)\n             IN      NS      NS1.DIGITALOCEAN.COM.\n                     NS      NS2.DIGITALOCEAN.COM.\n                     NS      NS3.DIGITALOCEAN.COM.\n@\tIN
+        A\t192.81.213.70\n","error":null,"zone_file_with_error":null},{"id":26233,"name":"hadoop001.do.cityhawk.ru","ttl":10800,"live_zone_file":"$TTL\t600\n@\t\tIN\tSOA\tNS1.DIGITALOCEAN.COM.\thostmaster.hadoop001.do.cityhawk.ru.
+        (\n\t\t\t1370638105 ; last update: 2013-06-07 20:48:25 UTC\n\t\t\t3600 ; refresh\n\t\t\t900
+        ; retry\n\t\t\t1209600 ; expire\n\t\t\t10800 ; ttl\n\t\t\t)\n             IN      NS      NS1.DIGITALOCEAN.COM.\n                     NS      NS2.DIGITALOCEAN.COM.\n                     NS      NS3.DIGITALOCEAN.COM.\n@\tIN
+        A\t198.199.71.249\n","error":null,"zone_file_with_error":null},{"id":28755,"name":"hadoop006.do.cityhawk.ru","ttl":1800,"live_zone_file":"$TTL\t600\n@\t\tIN\tSOA\tNS1.DIGITALOCEAN.COM.\thostmaster.hadoop006.do.cityhawk.ru.
+        (\n\t\t\t1370376343 ; last update: 2013-06-04 20:05:43 UTC\n\t\t\t3600 ; refresh\n\t\t\t900
+        ; retry\n\t\t\t1209600 ; expire\n\t\t\t1800 ; ttl\n\t\t\t)\n             IN      NS      NS1.DIGITALOCEAN.COM.\n                     NS      NS2.DIGITALOCEAN.COM.\n                     NS      NS3.DIGITALOCEAN.COM.\n@\tIN
+        A\t198.211.100.176\n","error":null,"zone_file_with_error":null}]}'
+    http_version: 
+  recorded_at: Sat, 08 Jun 2013 17:03:38 GMT
+recorded_with: VCR 2.5.0
