@@ -1,11 +1,20 @@
 ## unreleased
 
+* [Full Changelog](https://github.com/rmoriz/digital_ocean/compare/v1.2.0...master)
+
+
+## 1.2.0 / 2013-09-07
+
+* add ability to enable raise_errors faraday middleware (thanks @petems)
+
+* add support for DNS/Domain resource (thanks @CityHawk)
+
 * improved SSL configuration. defaults to VERIFY_PEER
 
-* [Full Changelog](https://github.com/rmoriz/digital_ocean/compare/v1.0.1...master)
+* [Full Changelog](https://github.com/rmoriz/digital_ocean/compare/v1.0.1...v1.2.0)
 
 
-## 1.0.1 / 2013-30-26
+## 1.0.1 / 2013-03-26
 
 * specified explicit min. version of faraday_middleware
 
