@@ -523,6 +523,21 @@ describe DigitalOcean::API, :vcr do
       end
     end
 
+    describe '#edit_record' do
+      let(:record_id)   { 206982 }
+      let(:record_type) { 'A'  }
+      let(:data)        { '8.8.8.8' }
+      let(:payload)     { {data: data, record_type: record_type} }
+      let(:response) {
+        subject.domains.edit_record record_domain_id, record_id, payload
+      }
+
+      it 'should be successful' do
+        puts response
+        response.status.should eql('OK')
+      end
+    end
+
     describe '#create_record' do
       let(:record_type)        { 'TXT'  }
       let(:name)  { 'foo' }

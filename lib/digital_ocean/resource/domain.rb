@@ -42,6 +42,12 @@ module DigitalOcean
         end.body
       end
 
+      def edit_record(id, rec_id, opts = {})
+        @connection.get "/domains/#{id}/records/#{rec_id}/edit" do |query|
+          apply_params(query, opts)
+        end.body                
+      end
+
       def delete_record(id, rec_id, opts = {})
         @connection.get("/domains/#{id}/records/#{rec_id}/destroy").body
       end
