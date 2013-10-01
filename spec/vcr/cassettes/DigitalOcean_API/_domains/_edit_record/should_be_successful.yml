@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.digitalocean.com/domains/30163/records/206982/edit?client_id=client_id_XXXXXXXXXXXXXXXXXXX&api_key=api_key_YYYYYYYYYYYYYYYYYYYYY&data=8.8.8.8&record_type=A
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Sun, 09 Jun 2013 15:30:49 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      etag:
+      - XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - c4b08ee185ca817df3f635fe74de08f1
+      x-runtime:
+      - '0.135435'
+      x-rack-cache:
+      - miss
+    body:
+      encoding: US-ASCII
+      string: ! '{"status":"OK","record":{"id":206982,"domain_id":30163,"record_type":"A","name":"@","data":"8.8.8.8","priority":null,"port":null,"weight":null}}'
+    http_version: 
+  recorded_at: Sun, 09 Jun 2013 15:30:49 GMT
+recorded_with: VCR 2.5.0
